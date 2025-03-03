@@ -1,0 +1,255 @@
+nav, body{
+    background-color: #292200
+}
+
+.nav-list li a {
+    text-decoration: none;
+    font-size: 1rem;
+}
+.logo{
+    font-size: 2.5rem;
+    color: #cc2a00;
+}
+.logo:hover{
+    color: #cc2a00;
+}
+.btn-scribe{
+    background-color: #cc2a00;
+}
+.btn-scribe:hover{
+    background-color: #cc2a00;
+}
+
+.hero-section{
+    background-color: #cc2a00;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom-left-radius: 85px;
+    border-bottom-right-radius: 85px;
+}
+.hero-section h1{
+    width: 35%;
+}
+
+.hero-section-content h1 span{
+    line-height: 1.5;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.hero-section a{
+    color: #cc2a00;
+    background-color: #292200 ;
+    text-decoration: none;
+}
+
+.text-change{
+    color: #FF80D5;
+}
+
+.performance{
+    max-width: 1220px;
+    border-radius: 30px;
+}
+.trust h2{
+    /* max-width: 1220px; */
+    width: 60%;
+}
+.content-section{
+    border-radius: 30px;
+}
+.orange{
+    background-color: #cc2a00;
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    /* padding-left: 0;
+    padding-right: 0; */
+}
+.green{
+    border: 2px solid green;
+    color: green;
+    background-color:black;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.purple{
+    border: 2px solid purple;
+    color: purple;
+    background-color: black;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.lght-orange{
+    border: 2px solid #cc2a00;
+    color: #cc2a00;
+    background: black;
+}
+.blue{
+    border: 2px solid blue;
+    color: blue;
+    background-color: black;
+}
+.btn-custom {
+    padding: 12px 20px; /* Set padding for buttons */
+    font-size: 16px; /* Set font size */
+    transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+    .btn-custom {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 480px) {
+    .btn-custom {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+.reco-section{
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #4c003f;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+@media (max-width: 1024px){
+    .reco-section{
+        padding-left: 90px;
+        padding-right: 90px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+}
+.reco-section h2{
+    color: #cc2a00;
+}
+.feature-section{
+    max-width: 900px;
+}
+.features-content{
+    max-width: 700px;  
+}
+.feature-image{
+    height: 400px;
+}
+.plagiarism-section {
+    background-color: #cc2a00;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .plagiarism-section {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  
+    .plagiarism-section h2 {
+      font-size: 1.75rem; 
+    }
+  
+    .plagiarism-section p {
+      font-size: 1rem; 
+    }
+  
+    .plagiarism-section img {
+      width: 100%; 
+      max-width: 300px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .plagiarism-section {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  
+    .plagiarism-section h2 {
+      font-size: 1.5rem; 
+    }
+  
+    .plagiarism-section p {
+      font-size: 0.9rem; 
+    }
+  
+    .plagiarism-section img {
+      width: 80%;
+      max-width: 250px;
+    }
+  }
+  
+
+  .hero-1-section {
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 80px;
+    position: relative;
+    min-height: 640px;
+}
+.hero-bg-mobile {
+    background: url('https://rytr.me/wp-content/uploads/2024/02/Group-506.png') center/contain no-repeat;
+    height: 350px;
+    width: 100%;
+    z-index: 10;
+}
+.hero-bg-desktop {
+    background: url('https://rytr.me/wp-content/uploads/2024/02/Group-327-%F0%9F%9A%80.png') center/contain no-repeat;
+    height: 640px;
+    width: 100%;
+    position: absolute;
+}
+.cta-btn {
+    background-color: #cc2a00;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+
+    display: inline-block;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cta-btn:hover {
+    background-color: #cc2a00;
+}
+.pricing-title {
+    max-width: 920px;
+    margin-bottom: 40px;
+    font-size: 48px; 
+    line-height: 58px;
+    margin: 0 auto; 
+    padding: 0 15px; 
+}
+
+@media (min-width: 992px) { 
+    .pricing-title {
+        font-size: 60px;
+        line-height: 72px;
+    }
+}
+@media (max-width: 991px) {
+    .pricing-title {
+        font-size: 48px;
+        line-height: 58px;
+    }
+}
+
+@media (max-width: 767px) {
+    .pricing-title {
+        font-size: 36px;
+        line-height: 46px;
+    }
+}
+@media (max-width: 480px) {
+    .pricing-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+}
