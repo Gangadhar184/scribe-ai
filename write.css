@@ -1,0 +1,141 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Custom styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.app-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: 500;
+  margin-right: 2rem;
+}
+
+.nav-link {
+  color: white !important;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+}
+
+.nav-link.active {
+  background-color: #ff4500;
+}
+
+.sidebar {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  width: 250px;
+}
+
+.dropdown-toggle {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1rem;
+  background-color: #444;
+  border: none;
+}
+
+.editor-container {
+  flex-grow: 1;
+  background-color: #444;
+  padding: 1rem;
+}
+
+.editor-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.editor-header .back-button {
+  margin-right: 1rem;
+  color: white;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.editor-title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.editor-toolbar {
+  background-color: #333;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.toolbar-btn {
+  background: none;
+  border: none;
+  color: white;
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.toolbar-btn:hover {
+  background-color: #555;
+}
+
+.toolbar-divider {
+  height: 20px;
+  width: 1px;
+  background-color: #555;
+  margin: 0 0.5rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.editor-content {
+  background-color: #333;
+  border-radius: 4px;
+  padding: 1rem;
+  min-height: 500px;
+  color: white;
+}
+
+.word-count {
+  color: #aaa;
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ff4500;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.upgrade-btn {
+  background-color: #ff4500;
+  border: none;
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+}
