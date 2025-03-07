@@ -82,58 +82,21 @@
             <i data-lucide="arrow-left"></i>
           </button>
           <h2 class="editor-title">New Document</h2>
-          <div class="ms-auto">
+          <!-- <div class="ms-auto">
             <button class="btn btn-link text-white">
               <i data-lucide="more-vertical"></i>
             </button>
-          </div>
+          </div> -->
         </div>
+        <div class="word-character-count">
+          <p> Words: 0 Characters: 0</p>
+         </div>
 
-        <!-- <div class="editor-toolbar">
-          <button class="toolbar-btn"><i data-lucide="bold"></i></button>
-          <button class="toolbar-btn"><i data-lucide="italic"></i></button>
-          <button class="toolbar-btn"><i data-lucide="underline"></i></button>
-          <button class="toolbar-btn"><i data-lucide="strikethrough"></i></button>
-          <span class="toolbar-divider"></span>
-          <button class="toolbar-btn"><i data-lucide="heading-1"></i></button>
-          <button class="toolbar-btn"><i data-lucide="heading-2"></i></button>
-          <button class="toolbar-btn"><i data-lucide="heading-3"></i></button>
-          <span class="toolbar-divider"></span>
-          <button class="toolbar-btn"><i data-lucide="list"></i></button>
-          <button class="toolbar-btn"><i data-lucide="list-ordered"></i></button>
-          <span class="toolbar-divider"></span>
-          <button class="toolbar-btn"><i data-lucide="link"></i></button>
-          <button class="toolbar-btn"><i data-lucide="image"></i></button>
-          <button class="toolbar-btn"><i data-lucide="quote"></i></button>
-          <button class="toolbar-btn"><i data-lucide="highlighter"></i></button>
-          <span class="toolbar-divider"></span>
-          <button class="toolbar-btn"><i data-lucide="align-left"></i></button>
-          <button class="toolbar-btn"><i data-lucide="align-center"></i></button>
-          <button class="toolbar-btn"><i data-lucide="align-right"></i></button>
-          <span class="toolbar-divider"></span>
-          <button class="toolbar-btn"><i data-lucide="table"></i></button>
-          <span class="toolbar-divider"></span>
-          <button class="toolbar-btn"><i data-lucide="undo"></i></button>
-          <button class="toolbar-btn"><i data-lucide="redo"></i></button>
-        </div> -->
+         <div id="editor">
+           Onepiece
+        </div> 
 
-        <!-- <div class="editor-content">
-          <div class="cursor-position">
-             Create the toolbar container 
-
-
-
-          </div>
-        </div> -->
-        <div id="editor">
-          <p>Hello World!</p>
-          <p>Some initial <strong>bold</strong> text</p>
-          <p><br /></p>
-        </div>
-
-        <div class="word-count">
-          Words: 0 Characters: 0
-        </div>
+       
 
         <div class="user-avatar">
           S
@@ -145,7 +108,10 @@
 <!-- Include the Quill library -->
 <script src="https://cdn.jsdelivr.net/npm/quill@2/dist/quill.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Initialize Lucide icons -->
+ 
+
+
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       lucide.createIcons();
@@ -154,5 +120,6 @@
     theme: "snow",
   });
   </script>
+
 </body>
 </html>
