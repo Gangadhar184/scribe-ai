@@ -117,7 +117,7 @@ body {
   
 }
 
-.user-avatar {
+/* .user-avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -130,7 +130,7 @@ body {
   position: absolute;
   right: 1rem;
   top: 1rem;
-}
+} */
 
 .upgrade-btn {
   background-color: #ff4500;
@@ -181,4 +181,7 @@ body {
   border-top: 0;
   color: white;
   font-size: 20px;
+}
+.ql-formats{
+  border: 1px solid #545050;
 }
