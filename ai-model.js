@@ -8,6 +8,12 @@ const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-exp" });
 
 //prompt for getting the result
 
+//we have to write the function to generate text from AI
+
+async function generateTextFromModel() {
+        
+}
+
 const prompt = " ";
 
 // const informationData = {

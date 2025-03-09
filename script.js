@@ -29,8 +29,27 @@ document.addEventListener("DOMContentLoaded", () => {
                 item.addEventListener("click", (e) => {
                     e.preventDefault();
                     button.innerHTML = item.innerHTML; 
-                });
+                }); 
             });
         }
-    });
+    }); 
 });
+// when i click on scribe for me btn the data shouuld be generated according the context and keywords i selected in dropdown
+const scribeBtn = document.getElementById('start-scribing');
+scribeBtn.addEventListener('click', async() => {
+    const language = document.getElementById("dropdownLanguage").innerText.trim();
+    const tone = document.getElementById("dropdownTone").innerText.trim();
+    const useCase = document.getElementById("dropdownUseCase").innerText.trim();
+    const keyword = document.getElementById("keywords").value.trim();
+
+    if(!keyword){
+        alert("Please enter the context related keywords");
+        return;
+    }
+
+    //then here we have to send data to ai model 
+    
+
+    //then we have to render the content in quill text editor
+    
+})
