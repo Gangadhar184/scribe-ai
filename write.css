@@ -46,6 +46,15 @@ body {
   background-color: #444;
   border: none;
 }
+.keyword{
+  background-color: #333;
+  border: 1px solid silver;
+  color: white;
+}
+.scribe-me{
+  background-color: #ff4500;
+  border: none;
+}
 
 .editor-container {
   flex-grow: 1;
@@ -53,6 +62,7 @@ body {
   padding: 1rem;
   
 }
+
 
 .editor-header {
   display: flex;
