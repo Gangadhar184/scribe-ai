@@ -32,37 +32,49 @@ body {
   background-color: #ff4500;
 }
 
+.container-fluid {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+/* Sidebar */
 .sidebar {
   background-color: #333;
   color: white;
   padding: 1rem;
   width: 250px;
+  flex-shrink: 0;
+  overflow-y: auto;
 }
 
 .dropdown-toggle {
   width: 100%;
   text-align: left;
-  margin-bottom: 1rem;
   background-color: #444;
   border: none;
+  margin-bottom: 1rem;
 }
-.keyword{
+
+.keyword {
   background-color: #333;
   border: 1px solid silver;
   color: white;
 }
-.scribe-me{
+
+.scribe-me {
   background-color: #ff4500;
   border: none;
 }
 
+/* Editor */
 .editor-container {
   flex-grow: 1;
   background-color: black;
   padding: 1rem;
-  
+  display: flex;
+  flex-direction: column;
 }
-
 
 .editor-header {
   display: flex;
@@ -84,107 +96,25 @@ body {
   font-size: 1.2rem;
 }
 
-.editor-toolbar {
-  background-color: #333;
-  padding: 0.5rem;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-}
-
-.toolbar-btn {
-  background: none;
-  border: none;
-  color: white;
-  margin-right: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-}
-
-.toolbar-btn:hover {
-  background-color: #555;
-}
-
-.toolbar-divider {
-  height: 20px;
-  width: 1px;
-  background-color: #555;
-  margin: 0 0.5rem;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.editor-content {
-  background-color: #333;
-  border-radius: 4px;
-  padding: 1rem;
-  min-height: 500px;
-  color: white;
-}
-
-.word-count {
-  color: white;
-  text-align: right;
-  
-}
-
-/* .user-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #ff4500;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-} */
-
-.upgrade-btn {
-  background-color: #ff4500;
-  border: none;
-  border-radius: 50px;
-  padding: 0.5rem 1.5rem;
-  font-weight: bold;
-}
-.word-character-count{
+.word-character-count {
   color: white;
   display: flex;
   justify-content: end;
 }
 
-/* editor */
-#editor{
-  height: 100dvh;
+#editor {
+  flex-grow: 1;
+  height: 100%;
 }
+
+/* Quill Editor */
 .ql-toolbar.ql-snow {
   border: 1px solid #545050;
-  box-sizing: border-box;
-  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   padding: 8px;
 }
 
 .ql-container.ql-snow {
   border: 1px solid #545050;
-}
-.ql-snow .ql-picker {
-  color: white;
-  display: inline-block;
-  /* float: left; */
-  font-size: 14px;
-  font-weight: 500;
-  height: 24px;
-  position: relative;
-  vertical-align: middle;
-}
-.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-label {
-  border: 1px solid #545050;
-}
-.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-options {
-  border-color: #545050;
-  background: black;
 }
 
 .ql-toolbar.ql-snow + .ql-container.ql-snow {
@@ -192,6 +122,33 @@ body {
   color: white;
   font-size: 20px;
 }
-.ql-formats{
+
+.ql-formats {
   border: 1px solid #545050;
+}
+.upgrade-btn{
+  background-color: #ff4500;
+  border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container-fluid {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .editor-container {
+    height: calc(100vh - 250px);
+    overflow-y: auto;
+  }
+
+  .scribe-me {
+    width: 100%;
+  }
 }
