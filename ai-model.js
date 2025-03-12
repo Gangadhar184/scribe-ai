@@ -17,4 +17,4 @@ async function generateTextFromModel(prompt) {
     return null;
   }
 }
-export default { generateTextFromModel };
+export default generateTextFromModel;
