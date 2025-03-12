@@ -1,23 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-
+        
+     // Handle word slider updates in landing page
+     const wordSlider = document.getElementById('word-slider');
+     const wordCountDisplay = document.getElementById('word-count');
+ 
+     if (wordSlider && wordCountDisplay) {
+         wordSlider.addEventListener('input', () => {
+             wordCountDisplay.textContent = wordSlider.value;
+         });
+     }
+     
         // Initialize Quill editor
         window.quill = new Quill("#editor", { 
             theme: "snow" 
         });
-    // Handle word slider updates in landing page
-    const wordSlider = document.getElementById('word-slider');
-    const wordCountDisplay = document.getElementById('word-count');
-
-    if (wordSlider && wordCountDisplay) {
-        wordSlider.addEventListener('input', () => {
-            wordCountDisplay.textContent = wordSlider.value;
-        });
-    }
+   
 
     // Initialize Lucide icons
     lucide.createIcons();
-
-
 
     // Handle dropdown selection updates
     const dropdowns = document.querySelectorAll(".dropdown");
@@ -51,25 +51,26 @@ scribeBtn.addEventListener('click', async() => {
     }
 
     // debugger
-    console.log("Selected values:", {useCase, tone, language, keyword});
+    //console.log("Selected values:", {useCase, tone, language, keyword});
 
     // propmt based on user inputs
     const prompt = `You are an AI email generator specialized in crafting professional, engaging, and effective emails. 
-Your task is to generate a well-structured email based on the user’s inputs.
+                    
+    Your task is to generate a well-structured email based on the user’s inputs.
 
-## Email Details:
-- **Purpose**: ${useCase} 
-- **Tone**: ${tone} 
-- **Language**: ${language} 
-- **Keywords**: ${keyword} 
+Email Details:
+- Purpose: ${useCase} 
+- Tone: ${tone} 
+- Language: ${language} 
+- Keywords: ${keyword} 
 
-## Email Output Guidelines:
-Generate an email using the following format:
+Email Output Guidelines:
+Generate an email using the following format based on the context provided:
 
----
-**Subject**: [A compelling subject related to ${keyword}]
 
-**Dear Hiring Manager,**  
+Subject: [A compelling subject related to ${keyword}]
+
+Dear Hiring Manager,
 
 I hope this email finds you well. I am writing to express my interest in [Job Title] at [Company Name]. With my background in [Your Relevant Skills], I am confident in my ability to contribute to your team.
 
@@ -77,9 +78,9 @@ My experience in [Skill/Project] has allowed me to [Impact]. I am excited about 
 
 I would love to discuss how my skills align with the role. Please let me know a convenient time to connect.
 
-**Best regards,**  
+Best regards, 
 [Your Name]  
----
+
 
 Generate only the email as per this format. Do not include any explanations or introductions.
 `;
@@ -96,7 +97,7 @@ try {
 
     if(response.ok){
         const data = await response.json();
-        console.log("Generated text: ", data.text);
+        //console.log("Generated text: ", data.text);
 
         if (!data.text || data.text.trim() === "") {
             console.error("AI returned an empty response.");
