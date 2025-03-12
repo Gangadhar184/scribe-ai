@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+  
+    background-color: #121212;
+    color: #EAEAEA;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h5, p {
+    color: white;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Buttons */
+.btn {
+    background-color: #cc2a00;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: background 0.3s;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #cc2a00;
+}
+
+/* Outline Buttons */
+.btn-outline-primary,
+.btn-outline-danger,
+.btn-outline-success,
+.btn-outline-info,
+.btn-outline-warning {
+    border-width: 2px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.btn-outline-primary:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-outline-success:hover {
+    background-color: #198754;
+    color: white;
+}
+
+.btn-outline-info:hover {
+    background-color: #0dcaf0;
+    color: white;
+}
+
+.btn-outline-warning:hover {
+    background-color: #ffc107;
+    color: black;
+}
+
+/* Containers */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-heading-content-container,
+.button-section-content,
+.heading-use-generative-content-container {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+.para-img-button-reaction-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 20px;
+}
+
+.para-img-button-reaction-content-container div {
+    max-width: 300px;
+    margin: 10px;
+}
+
+/* Built for Business Section */
+#Built-heading-para-content-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 30px;
+}
+
+#Built-heading-para-content {
+    max-width: 320px;
+    padding: 20px;
+    margin: 10px;
+}
+
+/* Trusted Section */
+.container-fluid img {
+    max-width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .para-img-button-reaction-content-container,
+    #Built-heading-para-content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
