@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Handle "Scribe for Me" button click
     const scribeBtn = document.getElementById("start-scribing");
     scribeBtn.addEventListener("click", async () => {
-        // Retrieve selected values
+
         const language = document.getElementById("dropdownLanguage").getAttribute("data-value") || "English";
         const tone = document.getElementById("dropdownTone").getAttribute("data-value") || "Professional";
         const useCase = document.getElementById("dropdownUseCase").getAttribute("data-value") || "General";
