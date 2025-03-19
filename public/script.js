@@ -87,32 +87,33 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
 
         try {
-            const response = await fetch("http://localhost:3000/generate-text", {
+            const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=YOUR_GEMINI_API_KEY", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ prompt }),
+                body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }),
             });
 
             if (response.ok) {
                 const data = await response.json();
 
-                if (!data.text || data.text.trim() === "") {
-                    console.error("AI returned an empty response.");
-                    alert("AI model did not generate any text. Try refining the prompt.");
+                const generatedText = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
+
+                if (!generatedText) {
+                    alert("AI did not generate any text. Try refining the prompt.");
                     return;
                 }
 
                 // Render in Quill editor
                 quill.root.innerHTML = data.text;
             } else {
-                console.error("Failed to generate text, status:", response.status);
-                alert("Failed to generate text. Please try again.");
+                alert("Failed to generate text. Check API key and quota.");
             }
+
         } catch (error) {
-            console.error("Error calling AI API:", error);
-            alert("An error occurred while generating the text. Please check your backend.");
+            console.error("Error calling Gemini API:", error);
+            alert("An error occurred while generating the text.");
         }
     });
 });

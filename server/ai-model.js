@@ -1,6 +1,7 @@
 //initialize the model- Gemini SDK
 // require("dotenv").config();
-import "dotenv/config";
+import dotenv from "dotenv";
+dotenv.config();
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 
