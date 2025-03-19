@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         Best regards,  
         [Your Name]  
-        
+    
         
         Generate the best possible version of this email following the above structure.
         `;
