@@ -1,7 +1,8 @@
 //initialize the model- Gemini SDK
 // require("dotenv").config();
-import { GoogleGenerativeAI } from "@google/generative-ai";
 import "dotenv/config";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
