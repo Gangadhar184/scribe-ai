@@ -18,6 +18,7 @@ async function generateTextFromModel(prompt) {
     const result = await model.generateContent([prompt]);
     console.log("response: ", result);
     const responseText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+    console.log(responseText);
 if (!responseText) {
     throw new Error("AI response is undefined.");
 }

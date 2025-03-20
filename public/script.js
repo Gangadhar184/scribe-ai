@@ -97,9 +97,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (response.ok) {
                 const data = await response.json();
-
+                console.log(data);
                 const generatedText = data?.candidates?.[0]?.content?.parts?.[0]?.text || "";
-
+                console.log(generatedText);
                 if (!generatedText) {
                     alert("AI did not generate any text. Try refining the prompt.");
                     return;
