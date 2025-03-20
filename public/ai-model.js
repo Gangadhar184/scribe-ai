@@ -1,11 +1,10 @@
 //initialize the model- Gemini SDK
 // require("dotenv").config();
-import dotenv from "dotenv";
-dotenv.config();
+
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const genAI = new GoogleGenerativeAI("AIzaSyDCLZApat0J1hZw087e64JnIWtsSq8cRuY");
 
 const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
@@ -18,10 +17,11 @@ async function generateTextFromModel(prompt) {
     console.log("prompt:", prompt);
     const result = await model.generateContent([prompt]);
     console.log("response: ", result);
-    if(!result || !result.response){
-      throw new Error("ai respoinse is undefined ");
-    }
-    return result.response.text();
+    const responseText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+if (!responseText) {
+    throw new Error("AI response is undefined.");
+}
+return responseText;
   } catch (error) {
     console.error("Error generating text: ", error);
     return null;

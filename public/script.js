@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
 
         try {
-            const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=YOUR_GEMINI_API_KEY", {
+            const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyDCLZApat0J1hZw087e64JnIWtsSq8cRuY", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (response.ok) {
                 const data = await response.json();
 
-                const generatedText = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
+                const generatedText = data?.candidates?.[0]?.content?.parts?.[0]?.text || "";
 
                 if (!generatedText) {
                     alert("AI did not generate any text. Try refining the prompt.");
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 // Render in Quill editor
-                quill.root.innerHTML = data.text;
+                quill.root.innerHTML = generatedText;
             } else {
                 alert("Failed to generate text. Check API key and quota.");
             }
