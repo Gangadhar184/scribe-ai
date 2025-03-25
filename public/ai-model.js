@@ -6,7 +6,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const genAI = new GoogleGenerativeAI("AIzaSyDCLZApat0J1hZw087e64JnIWtsSq8cRuY");
 
-const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash",  });
 
 //we have to write the function to generate text from AI
 async function generateTextFromModel(prompt) {
