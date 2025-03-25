@@ -56,16 +56,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         # [Blog Title Related to {keyword}]
 
-        **Introduction**  
+        Introduction  
         Provide a compelling introduction that hooks the reader and introduces the topic.
 
-        **Main Content**  
+        Main Content 
         - Key point 1  
         - Key point 2  
         - Key point 3  
         Expand on each point with useful insights, examples, or facts.
 
-        **Conclusion**  
+        Conclusion 
         Summarize the topic and provide a final thought or call to action.`,
 
         "Video Description": `You are a skilled AI writing assistant specializing in generating compelling YouTube video descriptions.
@@ -80,15 +80,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         Example Output:
 
-        **[Video Title Related to {keyword}]**
+        [Video Title Related to {keyword}]
 
-        **Introduction:**  
+        Introduction:
         Write an engaging hook that explains what the video is about.
 
-        **Video Summary:**  
+        Video Summary:
         Provide a concise overview of the key points discussed in the video.
 
-        **Call to Action:**  
+        Call to Action:
         Encourage viewers to like, comment, subscribe, or check out related content.`
     };
 
